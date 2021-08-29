@@ -11,6 +11,7 @@
 .navbar__list {
     list-style: none;
     padding-left: 0;
+    /* display: flex; */
 }
 
 .navbar__item {
@@ -19,12 +20,18 @@
     position: relative;
 }
 
+.navbar__icon-link,
 .navbar__item-link,
 .navbar__item {
     display: inline-block;
     font-size: 1.4rem;
     color: var(--white-color);
     text-decoration: none;
+}
+
+.navbar__item {
+    display: inline-flex;
+    align-items: center;
 }
 
 .navbar__item--strong {
@@ -46,4 +53,23 @@
 /* way 2 to add separate */
 .navbar__item--separate {
     border-right: 2px solid #FB9086;
+}
+
+.navbar-icon:hover,
+.navbar__item-faded:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 5px;
+}
+
+.fa-instagram {
+    font-size: 2rem;
+}
+
+.fa-facebook {
+    margin-left: 7px;
 }
