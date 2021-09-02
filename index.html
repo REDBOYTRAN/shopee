@@ -17,11 +17,27 @@
             <div class="grid">
                 <nav class="navbar">
                     <ul class="navbar__list">
-                        <li class="navbar__item navbar__item--separate navbar__item-faded">Kênh Người Bán</li>
-                        <li class="navbar__item navbar__item--separate navbar__item-faded">Trở thành Người bán Shopee</li>
-                        <li class="navbar__item navbar__item--separate navbar__item-faded">Tải ứng dụng</li>
+                        <li class="navbar__item navbar__item--separate navbar__item-faded"><a href="#">Kênh Người Bán</a></li>
+                        <li class="navbar__item navbar__item--separate navbar__item-faded"><a href="#">Trở thành Người bán Shopee</a></li>
+                        <li class="navbar__item navbar__item--separate navbar__item-faded navbar__item--open-qr">
+                            <a href="#">Tải ứng dụng</a>
+                            <div class="navbar__qr">
+                                <img src="./assets/img/QR.png" alt="QR code" class="navbar__qr-img">
+                                <div class="navbar__qr-apps">
+                                    <a href="" class="navbar__qr-link">
+                                        <img src="./assets/img/AppStore.png" alt="App Store" class="navbar__qr-apps-download">
+                                    </a>
+                                    <a href="" class="navbar__qr-link">
+                                        <img src="./assets/img/CHplay.png" alt="Google Play" class="navbar__qr-apps-download">
+                                    </a>
+                                    <a href="" class="navbar__qr-link">
+                                        <img src="./assets/img/AppGa.png" alt="AppGallery" class="navbar__qr-apps-download">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
                         <li class="navbar__item">
-                            Kết nối
+                            <span href="#" class="navbar__connect--no-hover">Kết nối</span>
                             <a href="" class="navbar__icon-link">
                                 <i class="fab fa-facebook navbar-icon"></i>
                             </a>
@@ -31,16 +47,56 @@
                         </li>
                     </ul>
                     <ul class="navbar__list">
-                        <li class="navbar__item">
-                            <a href="" class="navbar__item-link navbar__item-faded">
+                        <!-- thông báo start -->
+                        <li class="navbar__item navbar__item--open-notify navbar__item-faded">
+                            <a href="" class="navbar__item-link">
                                 <i class="far fa-bell navbar-icon"></i>
-                                Thông báo
+                                <a href="#">Thông báo</a>
                             </a>
+                            <!-- notify box -->
+                            <div class="navbar__notify">
+                                <div class="notify__header">
+                                    <span>Thông Báo Mới Nhận</span>
+                                </div>
+                                <ul class="notify__list">
+                                    <li class="notify__item notify__item--viewed">
+                                        <a href="" class="notify__link">
+                                            <img src="https://cf.shopee.vn/file/40937b8c8efcd3311d4b2ebb8d21e6bd_tn" alt="" class="notify__img">
+                                            <div class="notify__info">
+                                                <div class="notify__title">Xác thực nguồn gốc các sản phẩm chính hãng Ohui</div>
+                                                <div class="notify__desc">Mô tả mỹ phẩm Ohui chính hãng Mô tả mỹ phẩm Ohui chính hãng Mô tả mỹ phẩm Ohui chính hãng</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notify__item notify__item--viewed">
+                                        <a href="" class="notify__link">
+                                            <img src="https://cf.shopee.vn/file/40937b8c8efcd3311d4b2ebb8d21e6bd_tn" alt="" class="notify__img">
+                                            <div class="notify__info">
+                                                <div class="notify__title">Thông báo thứ hai về xác thực nguồn gốc các sản phẩm chính hãng Ohui</div>
+                                                <div class="notify__desc">Mô tả mỹ phẩm Ohui chính hãng Mô tả mỹ phẩm Ohui chính hãng Mô tả mỹ phẩm Ohui chính hãng</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="notify__item">
+                                        <a href="" class="notify__link">
+                                            <img src="https://cf.shopee.vn/file/40937b8c8efcd3311d4b2ebb8d21e6bd_tn" alt="" class="notify__img">
+                                            <div class="notify__info">
+                                                <div class="notify__title">Mỹ phẩm Ohui chính hãng</div>
+                                                <div class="notify__desc">Mô tả mỹ phẩm Ohui chính hãng Mô tả mỹ phẩm Ohui chính hãng Mô tả mỹ phẩm Ohui chính hãng</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="notify__footer">
+                                    <a href="" class="notify__footer-btn">Xem tất cả</a>
+                                </div>
+                            </div>
                         </li>
-                        <li class="navbar__item">
-                            <a href="" class="navbar__item-link navbar__item-faded">
+                        <!-- thông báo end -->
+                        <li class="navbar__item navbar__item-faded">
+                            <a href="" class="navbar__item-link">
                                 <i class="far fa-question-circle navbar-icon"></i>
-                                Hỗ trợ
+                                <a href="#">Hỗ trợ</a>
                             </a>
                         </li>
                         <li class="navbar__item navbar__item--strong navbar__item-faded navbar__item--separate">Đăng ký</li>
