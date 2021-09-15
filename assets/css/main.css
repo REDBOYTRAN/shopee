@@ -155,6 +155,7 @@
     will-change: opacity, transform; /*attribute trên trình duyệt giúp tối ưu chuyển động*/
     display: none;
     transition: 1s;
+    z-index: 1;
 } 
 
 @keyframes headerNotifyGrowth {
@@ -433,15 +434,79 @@
     font-size: 2.4rem;
 }
 
-.header__search-input {
+.search-input {
     flex: 1;
     height: 100%;
+    position: relative;
+}
+
+.search-input__type {
+    height: 100%;
+    width: 100%;
     border: none;
     outline: none;
     font-size: 1.4rem;
     color: var(--text-color);
     padding: 0 12px;
     border-radius: 2px;
+}
+
+.search-input__type:focus ~ .search-history {
+    display: block;
+}
+
+/* search history */
+
+.search-history {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: calc(100% - 16px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 0 6px #c3c3c3;
+    margin: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.search-history::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    top: -10px;
+    left: 0;
+}
+
+.search-history__heading {
+    margin: 8px 12px;
+    color: #BBBBBB;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.search-history__list {
+    padding: 0;
+    margin: 0;
+}
+
+.search-history__item {
+    height: 38px;
+    padding: 8px 12px;
+    list-style: none;
+}
+
+.search-history__item:hover {
+    background-color: #fafafa;
+}
+
+.search-history__item a {
+    line-height: 22px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 .header__search-select {
