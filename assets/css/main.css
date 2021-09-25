@@ -14,13 +14,103 @@
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
-    /* display: flex; */
+    display: flex;
 }
 
 .navbar__item {
     padding: 0 8px;
     /* margin: 0 8px; */
     position: relative;
+}
+
+.navbar__user {
+    display: flex;
+    justify-items: center;
+}
+
+.navbar__user-img {
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+}
+
+.navbar__user-name {
+    margin-left: 4px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.navbar__user:hover .navbar__user-dropdown {
+    display: block;
+}
+
+.navbar__user-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 7px);
+    right: 8px;
+    width: 150px;
+    background-color: var(--white-color);
+    z-index: 2;
+    border-radius: 2px;
+    transform-origin: calc(100% - 50px)  top;
+    animation: dropdownGrowth ease-in 0.2s;
+    will-change: opacity, transform;
+    box-shadow: 0 1px 4px #999999;
+}
+
+.navbar__user-dropdown::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -26px;
+    right: 14px;
+    cursor: pointer;
+    z-index: -1;
+    border-style: solid;
+    border-width: 20px 30px;
+    border-color: transparent transparent var(--white-color) transparent;
+}
+
+.navbar__user-dropdown::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -9px;
+    right: 0;
+    z-index: -2;
+    width: 70%;
+    height: 10px;
+}
+
+.user-dropdown__item {
+    display: block;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    padding: 10px 14px;
+}
+
+.user-dropdown__item:hover {
+    color: #28AA8D;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.user-dropdown__item:first-child {
+    padding-top: 12px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.user-dropdown__item:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.user-dropdown__item--separate {
+    color: #919496;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .navbar__icon-link,
@@ -33,8 +123,14 @@
     text-decoration: none;
 }
 
+.navbar__icon-link:nth-child(2) {
+    padding-left: 3px;
+}
+
 .navbar__item {
-    display: inline-flex;
+    position: relative;
+    height: 1.6rem;
+    display: flex;
     align-items: center;
 }
 
@@ -59,7 +155,8 @@
     border-right: 2px solid #FB9086;
 }
 
-.navbar-icon:hover,
+.navbar__icon-link:hover,
+.navbar__item-faded:hover > span,
 .navbar__item-faded:hover > a {
     opacity: 0.7;
     cursor: pointer;
@@ -151,15 +248,15 @@
     background-color: var(--white-color);
     border-radius: 2px;
     border: 1px solid #D3D3D3;
-    transform-origin: calc(100% - 20px)  top;
-    animation: headerNotifyGrowth ease-in 0.2s;
+    transform-origin: calc(100% - 40px)  top;
+    animation: dropdownGrowth ease-in 0.2s;
     will-change: opacity, transform; /*attribute trên trình duyệt giúp tối ưu chuyển động*/
     display: none;
     transition: 1s;
     z-index: 1;
 } 
 
-@keyframes headerNotifyGrowth {
+@keyframes dropdownGrowth {
     from {
         opacity: 0;
         transform: scale(0);
@@ -413,6 +510,11 @@
     width: 150px;
 }
 
+.header__logo-link {
+    text-decoration: none;
+    color: transparent;
+}
+
 .header__search {
     background-color: var(--white-color);
     height: 40px;
@@ -468,7 +570,9 @@
     background-color: var(--white-color);
     width: 400px;
     border-radius: 2px;
-    animation: fadeIn ease-in 0.1s;
+    transform-origin: calc(100% - 20px)  top;
+    animation: dropdownGrowth ease-in 0.2s;
+    will-change: opacity, transform;
     box-shadow: 0 1px 3.125rem rgba(0,0,0,0.2);
     cursor: default;
 }
@@ -627,12 +731,12 @@
 
 .search-history {
     position: absolute;
-    top: calc(100% + 4px);
+    top: calc(100% + 3px);
     left: 0;
     width: calc(100% - 16px);
     background-color: var(--white-color);
     border-radius: 2px;
-    box-shadow: 0 0 6px #c3c3c3;
+    box-shadow: 0 1px 4px #999999;
     margin: 0;
     overflow: hidden;
     display: none;
@@ -724,10 +828,10 @@
 .search-option {
     position: absolute;
     right: 0;
-    top: 100%;
+    top: calc(100% + 1px);
     width: 120px;
     padding-left: 0px;
-    box-shadow: 0 2px 8px #ccc;
+    box-shadow: 0 1px 4px #999999;
     border-radius: 2px;
     display: none;
     animation: fadeIn ease-in 0.1s;
