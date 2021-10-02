@@ -165,6 +165,7 @@ html {
     border-radius: 2px;
     cursor: pointer;
     box-shadow: 0 1px 1px 0 rgb(0,0,0, 5%);
+    z-index: 1;
 }
 
 .select-input:hover .select-input__list {
@@ -211,4 +212,43 @@ html {
 
 .select-input__link:hover {
     color: var(--primary-color);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-item {
+    margin: 0 12px;
+    list-style: none;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active:hover a {
+    background-color: #f05d41;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+.pagination-item__icon {
+
 }
