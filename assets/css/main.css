@@ -170,7 +170,7 @@
     font-size: 1.8rem;
 }
 
-.fa-facebook {
+.navbar__item .fa-facebook {
     margin-left: 7px;
 }
 
@@ -614,7 +614,7 @@
 }
 
 .header__cart-list-tiem {
-    max-height: 340px;
+    max-height: 320px;
     overflow-y: auto;
     list-style: none;
     padding-left: 0;
@@ -1035,6 +1035,7 @@
 
 .home-product__item {
     display: block;
+    cursor: pointer;
     text-decoration: none;
     background-color: var(--white-color);
     margin-top: 10px;
@@ -1092,6 +1093,7 @@
 }
 
 .home-product__item-installment {
+    cursor: text;
     margin-top: 5px;
     font-size: 1rem;
     line-height: 1rem;
@@ -1275,4 +1277,103 @@ i.home-product__item-like-icon-fill {
 .home-product__item-sale-off-label {
     margin: auto;
     color: var(--white-color);
+}
+
+/* Footer */
+.footer {
+    border-top: 4px solid var(--primary-color);
+}
+
+.footer__heading {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(0,0,0,.54);
+    margin: 40px 0 20px;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item {
+    margin-bottom: 12px;
+}
+
+.footer-item__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: rgba(0,0,0,.54);
+    display: flex;
+    align-items: center;
+}
+
+.footer-item:hover .footer-item__link {
+    color: var(--primary-color);
+}
+
+.footer-item__icon {
+    font-size: 1.6rem;
+    margin-right: 10px;
+    margin-top: -1px;
+}
+
+.footer__download {
+    display: flex;
+}
+
+.footer__download-qr {
+    --width: 86px;
+    width: var(--width);
+    height: var(--width);
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+}
+
+.footer__download-apps {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer__download-apps-img {
+    height: 16px;
+}
+
+.footer__download-apps-link:nth-child(1) .footer__download-apps-img {
+    height: 20px;
+}
+
+.footer__download-apps-link:nth-child(2) .footer__download-apps-img {
+    height: 17px;
+}
+
+.footer__download-apps-link:nth-child(3) .footer__download-apps-img {
+    height: 16px;
+}
+
+.footer__download-apps-link {
+    text-decoration: none;
+    color: transparent;
+}
+
+.footer__bottom {
+    background-color: #f5f5f5;
+    margin-top: 34px;
+}
+
+.footer__bottom-text {
+    text-align: center;
+    font-weight: 400;
+    padding: 16px;
+    font-size: 1.4rem;
+    color: rgba(0,0,0,.54);
+    margin: 0;
+}
+
+.footer__bottom-text > a {
+    text-decoration: none;
+    color: var(--primary-color);
 }
